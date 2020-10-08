@@ -514,7 +514,7 @@ client.on('message', (message) => {
 });
 
 client.on('message', (message) => {
-  if(message.content === '조랭 하핳') {
+  if(message.content === '조랭아 하핳') {
     message.channel.send('하하핳하핳하ㅏ핳ㅎ하핳');
   }
 });
@@ -531,3 +531,14 @@ client.on('message', (message) => {
   }
 });
 
+client.on('message', (message) => {
+  if(message.content === '조랭아 좋아해') {
+    message.channel.send('난 너 싫은뎅? 하하핳');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 test') {
+    message.channel.send('정상 작동');
+  }
+});
