@@ -418,7 +418,7 @@ client.on('message', (message) => {
 });
 
 client.on('message', (message) => {
-  if(message.content === '배추') {
+  if(message.content === '조랭아 배추') {
     message.channel.send('그게 뭐죠 먹는 건가요?');
   }
 });
