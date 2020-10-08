@@ -27,6 +27,12 @@ client.on('message', (message) => {
 });
 
 client.on('message', (message) => {
+  if(message.content === '조랭아 무노') {
+    message.channel.send('악마');
+  }
+});
+
+client.on('message', (message) => {
   if(message.content === '조랭아 푸슉') {
     message.channel.send('절대 악!');
   }
@@ -422,3 +428,4 @@ client.on('message', (message) => {
     message.channel.send('그게 뭐죠 먹는 건가요?');
   }
 });
+
