@@ -307,4 +307,41 @@ client.on('message', (message) => {
   }
 });
 
+client.on('message', (message) => {
+  if(message.content === '크시') {
+    message.channel.send('미래에는 내가 더 멋진 봇이 될 꺼라고!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === 'ㅄ') {
+    message.channel.send('욕 하지마!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '야발') {
+    message.channel.send('욕 하지마!');
+  }
+});
+
+message.member.guild.members.find(x => x.id == userId).ban(kick_msg)
+if(message.content.startsWith('!주사위')) {
+  let min = 1;
+  let max = 6;
+  let dice_num = parseInt(Math.random() * (max - min) + min);
+  return message.reply(`${dice_num}가 나왔습니다.`);
+} else if(message.content.startsWith('!야')) {
+  let arr = [
+    '왜',
+    '뭐',
+    '뭠마',
+  ]
+  let min = 0;
+  let max = arr.length;
+  let index = parseInt(Math.random() * (max - min) + min);
+  return message.reply(`${arr[index]}가 나왔습니다.`);
+}
+
+
 
