@@ -423,3 +423,36 @@ client.on('message', (message) => {
   }
 });
 
+client.on('message', (message) => {
+  if(message.content === '조랭아 자바') {
+    message.channel.send('가장 좋은 언어!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 c언어') {
+    message.channel.send('길지만 그래도 좋은 언어!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 파이썬') {
+    message.channel.send('쉽고 빠르고 재밌는 만능 언어!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 c++') {
+    message.channel.send('게임 그래픽 만들 때 쓰이는 언어(?)');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 c#') {
+    message.channel.send('그게 뭐죠 먹는 건가요?!');
+  }
+});
+
+
+
+
