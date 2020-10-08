@@ -452,3 +452,15 @@ client.on('message', (message) => {
     message.channel.send('그게 뭐죠 먹는 건가요?!');
   }
 });
+
+if(message.content.startsWith('!야')) {
+  let arr = [
+    '왜',
+    '뭐',
+    '뭠마',
+  ]
+  let min = 0;
+  let max = arr.length;
+  let index = parseInt(Math.random() * (max - min) + min);
+  return message.reply(`${arr[index]}가 나왔습니다.`);
+}
