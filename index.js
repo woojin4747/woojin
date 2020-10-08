@@ -482,3 +482,33 @@ client.on('message', (message) => {
     message.channel.send('전!!!');
   }
 });
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 고양이') {
+    message.channel.send('뭐래 난 고양이가 아니야');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 강아지') {
+    message.channel.send('그런 하등한 생물의 이름을 꺼내지 마세요 흥!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 오우') {
+    message.channel.send('싸발적이고');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 오타') {
+    message.channel.send('두구ㅏ우ㅑㅐㅇㅍㄷㄴㅁ');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 심심해') {
+    message.channel.send('근데 뭐 확 막 그냥');
+  }
+});
