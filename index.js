@@ -452,3 +452,27 @@ client.on('message', (message) => {
     message.channel.send('그게 뭐죠 먹는 건가요?!');
   }
 });
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 심심해') {
+    message.channel.send('!놀아줘를 쳐봐');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '!놀아줘') {
+    message.channel.send('아싸도 아니고 혼자 놀아(퍽)');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 춤춰') {
+    message.channel.send('너 고양이가 춤추는거 본적 있니?!!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 조랭 조랭') {
+    message.channel.send('머랭 머랭~');
+  }
+});
