@@ -514,13 +514,13 @@ client.on('message', (message) => {
 });
 
 client.on('message', (message) => {
-  if(message.content === '조랭이 하핳') {
+  if(message.content === '조랭 하핳') {
     message.channel.send('하하핳하핳하ㅏ핳ㅎ하핳');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '조랭이 헤헿') {
+  if(message.content === '조랭아 헤헿') {
     message.channel.send('헤헤헤헤헤ㅔ헤헤ㅔㅎ헿');
   }
 });
