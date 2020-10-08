@@ -224,7 +224,7 @@ client.on('message', (message) => {
 });
 
 client.on('message', (message) => {
-  if(message.content === '조랭아 합') {
+  if(message.content === '합') {
     message.channel.send('체!!!');
   }
 });
@@ -474,5 +474,11 @@ client.on('message', (message) => {
 client.on('message', (message) => {
   if(message.content === '조랭아 조랭 조랭') {
     message.channel.send('머랭 머랭~');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '퓨') {
+    message.channel.send('전!');
   }
 });
