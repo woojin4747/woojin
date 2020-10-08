@@ -479,6 +479,6 @@ client.on('message', (message) => {
 
 client.on('message', (message) => {
   if(message.content === '퓨') {
-    message.channel.send('전!');
+    message.channel.send('전!!!');
   }
 });
