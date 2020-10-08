@@ -7,7 +7,7 @@ client.on('ready', () => {
 });
 
 client.on('message', (message) => {
-  if(message.content === '카파') {
+  if(message.content === '조랭아 카파') {
     message.channel.send('바보');
   }
 });
@@ -15,109 +15,109 @@ client.on('message', (message) => {
 client.login(token);
 
 client.on('message', (message) => {
-  if(message.content === '우진') {
+  if(message.content === '조랭아 우진') {
     message.channel.send('제작자 ◟( ˘ ³˘)◞');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '무노') {
+  if(message.content === '조랭아 무노') {
     message.channel.send('무노마을 최고의 촌장님!');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '푸슉') {
-    message.channel.send('천사가 따로없네?!');
+  if(message.content === '조랭아 푸슉') {
+    message.channel.send('절대 악!');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '파이어') {
+  if(message.content === '조랭아 파이어') {
     message.channel.send('포켔몬?');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '루피') {
+  if(message.content === '조랭아 루피') {
     message.channel.send('군침이 싹 도노');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '시발') {
+  if(message.content === '조랭아 시발') {
     message.channel.send('욕 하지마!');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === 'ㅅㅂ') {
+  if(message.content === '조랭아 ㅅㅂ') {
     message.channel.send('욕 하지마!');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === 'tlqkf') {
+  if(message.content === '조랭아 tlqkf') {
     message.channel.send('욕 하지마!');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '병신') {
+  if(message.content === '조랭아 병신') {
     message.channel.send('욕 하지마!');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === 'ㅄ') {
+  if(message.content === '조랭아 ㅄ') {
     message.channel.send('욕 하지마!');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === 'ㄲㅈ') {
+  if(message.content === '조랭아 ㄲㅈ') {
     message.channel.send('힝');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '수박') {
+  if(message.content === '조랭아 수박') {
     message.channel.send('아조씨');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '꺼져') {
+  if(message.content === '조랭아 꺼져') {
     message.channel.send('힝');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '이익') {
+  if(message.content === '조랭아 이익') {
     message.channel.send('이이익!');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '개새끼') {
+  if(message.content === '조랭아 개새끼') {
     message.channel.send('욕 하지마!');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '개') {
+  if(message.content === '조랭아 개') {
     message.channel.send('멍멍');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '개새') {
+  if(message.content === '조랭아 개새') {
     message.channel.send('욕 하지마!');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === 'ㄳㄲ') {
+  if(message.content === '조랭아 ㄳㄲ') {
     message.channel.send('욕 하지마!');
   }
 });
@@ -128,103 +128,103 @@ client.on('ready', () => {
 });
 
 client.on('message', (message) => {
-  if(message.content === 'ㅋ') {
+  if(message.content === '조랭아 ㅋ') {
     message.channel.send('뭘 쪼개(퍽)');
   }
 });
 
 client.on('message', (message) => {
   if(message.content === '/help') {
-    message.channel.send('``/help: 도움말을 엽니다, /전체공지 내용: 유저 DM에 메세지를 보냅니다``');
+    message.channel.send('``/help: 도움말을 엽니다, /전체공지 내용: 유저 갠디에 메세지를 보냅니다``');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '우진바보') {
+  if(message.content === '조랭아 우진바보') {
     message.channel.send('지-건');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '카파바보') {
+  if(message.content === '조랭아 카파바보') {
     message.channel.send('ㅇㅈ');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '우진 바보') {
+  if(message.content === '조랭아 우진 바보') {
     message.channel.send('지-건');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '카파 바보') {
+  if(message.content === '조랭아 카파 바보') {
     message.channel.send('ㅇㅈ');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '프슉') {
+  if(message.content === '조랭아 프슉') {
     message.channel.send('오타 수준');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '사랑해') {
+  if(message.content === '조랭아 사랑해') {
     message.channel.send('누구세요');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '아쿠아') {
+  if(message.content === '조랭아 아쿠아') {
     message.channel.send('바부');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '파라') {
+  if(message.content === '조랭아 파라') {
     message.channel.send('앗 뜨거워');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '오마에와 모 신데이루') {
+  if(message.content === '조랭아 오마에와 모 신데이루') {
     message.channel.send('나니?!');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === 'ㅗ') {
+  if(message.content === '조랭아 ㅗ') {
     message.channel.send('ㅗㅗ');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '엔터') {
+  if(message.content === '조랭아 엔터') {
     message.channel.send('천사');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '실버') {
+  if(message.content === '조랭아 실버') {
     message.channel.send('골드');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '이스터에그') {
+  if(message.content === '조랭아 이스터에그') {
     message.channel.send('놀랍게도 아무것도 없다');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '조랭이떡') {
+  if(message.content === '조랭아 조랭이떡') {
     message.channel.send('뭘봐 조랭이떡 같이 생긴게ㅡㅡ');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '합') {
+  if(message.content === '조랭아 합') {
     message.channel.send('체!!!');
   }
 });
@@ -242,49 +242,49 @@ client.on('message', (message) => {
 });
 
 client.on('message', (message) => {
-  if(message.content === '죽어') {
+  if(message.content === '조랭아 죽어') {
     message.channel.send('💔');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '네오') {
+  if(message.content === '조랭아 네오') {
     message.channel.send('히이이이이이이이이이이이이이이이익!!!!!!!');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '안녕') {
+  if(message.content === '조랭아 안녕') {
     message.channel.send('하이 쳐봐');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '하이') {
+  if(message.content === '조랭아 하이') {
     message.channel.send('방가워 쳐봐');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '방가워') {
+  if(message.content === '조랭아 방가워') {
     message.channel.send('안녕 쳐봐');
   }
 });
 
 client.on('message', (message) => {
   if(message.content === '조랭아 욕해줘') {
-    message.channel.send('욕은 나뻐...제발 욕해줘 쳐주면 해줄지도 히힛..?');
+    message.channel.send('욕은 나뻐...조랭아 제발 욕해줘 쳐주면 해줄지도 히힛..?');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '제발 욕해줘') {
+  if(message.content === '조랭아 제발 욕해줘') {
     message.channel.send('씨발련');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '따라하지마') {
+  if(message.content === '조랭아 따라하지마') {
     message.channel.send('말대꾸하지마!!!!');
   }
 });
@@ -296,37 +296,37 @@ client.on('message', (message) => {
 });
 
 client.on('message', (message) => {
-  if(message.content === '뭘봐') {
+  if(message.content === '조랭아 뭘봐') {
     message.channel.send('너 ❤');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '히힛') {
+  if(message.content === '조랭아 히힛') {
     message.channel.send('변태');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '크시') {
+  if(message.content === '조랭아 크시') {
     message.channel.send('미래에는 내가 더 멋진 봇이 될 꺼라고!');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === 'ㅄ') {
+  if(message.content === '조랭아 ㅄ') {
     message.channel.send('욕 하지마!');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '야발') {
+  if(message.content === '조랭아 야발') {
     message.channel.send('욕 하지마!');
   }
 });
 
 client.on('message', (message) => {
-  if(message.content === '발시') {
+  if(message.content === '조랭아 발시') {
     message.channel.send('욕 하지마!');
   }
 });
@@ -362,3 +362,15 @@ function checkPermission(message) {
     return false;
   }
 }
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 좆밥') {
+    message.channel.send('너!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 니 내 누군지 아니?') {
+    message.channel.send('내가 어떻게 알아 ㅅㅂ');
+  }
+});
