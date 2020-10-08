@@ -374,3 +374,51 @@ client.on('message', (message) => {
     message.channel.send('내가 어떻게 알아 ㅅㅂ');
   }
 });
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 그타') {
+    message.channel.send('ㅈ 망겜');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 옵치') {
+    message.channel.send('매칭 너무 길어 ;;');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 롤') {
+    message.channel.send('갓겜!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 이이잉') {
+    message.channel.send('앗살라 말라이쿰~');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '오렌지 먹은지') {
+    message.channel.send('오렌지~');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 로블록스') {
+    message.channel.send('크흠,,,');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 팀 크레센도') {
+    message.channel.send('어쩌라고');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '배추') {
+    message.channel.send('그게 뭐죠 먹는 건가요?');
+  }
+});
