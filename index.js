@@ -325,5 +325,12 @@ client.on('message', (message) => {
   }
 });
 
+client.on('message', (message) => {
+  if(message.content === '발시') {
+    message.channel.send('욕 하지마!');
+  }
+});
+
+
 
 
