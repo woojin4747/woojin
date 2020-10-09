@@ -21,14 +21,8 @@ client.on('message', (message) => {
 });
 
 client.on('message', (message) => {
-  if(message.content === '조랭아 무노') {
-    message.channel.send('무노마을 최고의 촌장님!');
-  }
-});
-
-client.on('message', (message) => {
   if(message.content === '조랭아 푸슉') {
-    message.channel.send('절대 악!');
+    message.channel.send('무노마을에서 가장 착하고 멋지고 키크고 인성 좋고 목소리 좋고 게임도 잘하고 머리도 좋은 무노마을 촌장님 :)');
   }
 });
 
@@ -614,3 +608,4 @@ client.on('message', (message) => {
     message.channel.send('별의 마을 촌짱!');
   }
 });
+
