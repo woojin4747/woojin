@@ -610,12 +610,6 @@ client.on('message', (message) => {
 });
 
 client.on('message', (message) => {
-  if(message.content === 'Arcata') {
-    message.channel.send('별의 마을 촌짱!');
-  }
-});
-
-client.on('message', (message) => {
   if(message.content === '조랭아 arcata') {
     message.channel.send('별의 마을 촌짱!');
   }
