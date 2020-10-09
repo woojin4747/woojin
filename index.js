@@ -542,3 +542,81 @@ client.on('message', (message) => {
     message.channel.send('정상 작동');
   }
 });
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 니가 뭘 알아') {
+    message.channel.send('조랭이떡 같이 생긴게!!!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 무노') {
+    message.channel.send('무노 무노~!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 니가 뭘알아') {
+    message.channel.send('조랭이떡 같이 생긴게!!!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 니가뭘알아') {
+    message.channel.send('조랭이떡 같이 생긴게!!!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 니가 몰 알아') {
+    message.channel.send('조랭이떡 같이 생긴게!!!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 니가 몰알아') {
+    message.channel.send('조랭이떡 같이 생긴게!!!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 니가몰알아') {
+    message.channel.send('조랭이떡 같이 생긴게!!!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 ?') {
+    message.channel.send('무노?');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 조랭이') {
+    message.channel.send('떡!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 떡') {
+    message.channel.send('저요..?');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 Arcata') {
+    message.channel.send('별의 마을 촌짱!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === 'Arcata') {
+    message.channel.send('별의 마을 촌짱!');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 arcata') {
+    message.channel.send('별의 마을 촌짱!');
+  }
+});
