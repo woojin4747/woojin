@@ -666,8 +666,45 @@ if(message.content.startsWith('/청소')) {
           return !(_cnt == count);
         });
       });
+    }
+  } else {
+    message.channel.bulkDelete(parseInt(clearLine)+1)
+      .then(() => {
+        AutoMsgDelete(message, `<@${message.author.id}> ` + parseInt(clearLine) + "개의 메시지를 삭제했습니다. (이 메세지는 잠시 후에 사라집니다.)");
+      })
+      .catch(console.error)
+  }
+}
+});
+
+function checkPermission(message) {
+if(!message.member.hasPermission("MANAGE_MESSAGES")) {
+  message.channel.send(`<@${message.author.id}> ` + "명령어를 수행할 관리자 권한을 소지하고 있지않습니다.")
+  return true;
+} else {
+  return false;
+}
+}
+
+function changeCommandStringLength(str, limitLen = 8) {
+let tmp = str;
+limitLen -= tmp.length;
+
+for(let i=0;i<limitLen;i++) {
+    tmp += ' ';
+}
+
+return tmp;
+}
+
+async function AutoMsgDelete(message, str, delay = 3000) {
+let msg = await message.channel.send(str);
+
+setTimeout(() => {
+  msg.delete();
+}, delay);
+}
 
 
-
-
+client.login(token);
 
