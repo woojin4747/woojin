@@ -1,26 +1,8 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const token = process.argv.length == 2 ? process.env.token : '';
-const welcomeChannelName = "안녕하세요";
-const byeChannelName = "안녕히가세요";
-const welcomeChannelComment = "어서오세요.";
-const byeChannelComment = "안녕히가세요.";
-
 client.on('ready', () => {
-  console.log('켰다.');
+ console.log('켰다.');
 });
 
-client.on("guildMemberAdd", (member) => {
-  const guild = member.guild;
-  const newUser = member.user;
-  const welcomeChannel = guild.channels.find(channel => channel.name == welcomeChannelName);
-
-  welcomeChannel.send(`<@${newUser.id}> ${welcomeChannelComment}\n`);
-
-  member.addRole(guild.roles.find(role => role.name == "게스트"));
-});
-
-client.on("guildMemberRemove", (member) => {
+lient.on("guildMemberRemove", (member) => {
   const guild = member.guild;
   const deleteUser = member.user;
   const byeChannel = guild.channels.find(channel => channel.name == byeChannelName);
@@ -40,7 +22,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setTitle('타이틀')
       .setURL('http://www.naver.com')
-      .setAuthor('나긋해', img, 'http://www.naver.com')
+      .setAuthor('muno_woojin', img, 'http://www.naver.com')
       .setThumbnail(img)
       .addBlankField()
       .addField('Inline field title', 'Some value here')
@@ -50,7 +32,7 @@ client.on('message', (message) => {
       .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
       .addBlankField()
       .setTimestamp()
-      .setFooter('나긋해가 만듬', img)
+      .setFooter('from muno_woojin', img)
 
     message.channel.send(embed)
   } else if(message.content == 'embed2') {
@@ -77,10 +59,10 @@ client.on('message', (message) => {
     message.channel.send(embed)
   }
 
-  if(message.content.startsWith('!전체공지')) {
+  if(message.content.startsWith('!전지')) {
     if(checkPermission(message)) return
-    if(message.member != null) { // 채널에서 공지 쓸 때
-      let contents = message.content.slice('!전체공지'.length);
+    if(message.member != null) { 
+      let contents = message.content.slice('!전지'.length);
       message.member.guild.members.array().forEach(x => {
         if(x.user.bot) return;
         x.user.send(`<@${message.author.id}> ${contents}`);
@@ -92,10 +74,10 @@ client.on('message', (message) => {
     }
   }
 
-  if(message.content.startsWith('!청소')) {
+  if(message.content.startsWith('/청소')) {
     if(checkPermission(message)) return
 
-    var clearLine = message.content.slice('!청소 '.length);
+    var clearLine = message.content.slice('/청소 '.length);
     var isNum = !isNaN(clearLine)
 
     if(isNum && (clearLine <= 0 || 100 < clearLine)) {
