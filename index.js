@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const token = process.env.token;
-const moment = require("moment");
 
 client.on('ready', () => {
   console.log('켰다.');
