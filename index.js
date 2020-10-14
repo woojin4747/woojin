@@ -639,19 +639,14 @@ client.on('message', (message) => {
   }
 });
 
-if(message.content.startsWith('!주사위')) {
-  let min = 1;
-  let max = 6;
-  let dice_num = parseInt(Math.random() * (max - min) + min);
-  return message.reply(`${dice_num}가 나왔습니다.`);
-} else if(message.content.startsWith('!야')) {
-  let arr = [
-    '왜',
-    '뭐',
-    '뭠마',
-  ]
-  let min = 0;
-  let max = arr.length;
-  let index = parseInt(Math.random() * (max - min) + min);
-  return message.reply(`${arr[index]}가 나왔습니다.`);
-}
+client.on('message', (message) => {
+  if(message.content === '조랭아 아싸') {
+    message.channel.send('카파?');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 이잉') {
+    message.channel.send('이이잉~');
+  }
+});
