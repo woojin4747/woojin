@@ -639,10 +639,10 @@ client.on('message', (message) => {
   }
 });
 
-if(message.content.startsWith('/청소')) {
+if(message.content.startsWith('!청소')) {
   if(checkPermission(message)) return
 
-  var clearLine = message.content.slice('/청소 '.length);
+  var clearLine = message.content.slice('!청소 '.length);
   var isNum = !isNaN(clearLine)
 
   if(isNum && (clearLine <= 0 || 100 < clearLine)) {
@@ -674,37 +674,15 @@ if(message.content.startsWith('/청소')) {
       })
       .catch(console.error)
   }
-}
-});
-
-function checkPermission(message) {
-if(!message.member.hasPermission("MANAGE_MESSAGES")) {
-  message.channel.send(`<@${message.author.id}> ` + "명령어를 수행할 관리자 권한을 소지하고 있지않습니다.")
-  return true;
-} else {
-  return false;
-}
-}
-
-function changeCommandStringLength(str, limitLen = 8) {
-let tmp = str;
-limitLen -= tmp.length;
-
-for(let i=0;i<limitLen;i++) {
-    tmp += ' ';
-}
-
-return tmp;
-}
+};
 
 async function AutoMsgDelete(message, str, delay = 3000) {
-let msg = await message.channel.send(str);
+  let msg = await message.channel.send(str);
 
-setTimeout(() => {
-  msg.delete();
-}, delay);
+  setTimeout(() => {
+    msg.delete();
+  }, delay);
 }
 
 
 client.login(token);
-
