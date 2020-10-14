@@ -652,3 +652,5 @@ client.on('message', (message) => {
     message.channel.send('뭘 쪼개(퍽)');
   }
 });
+
+client.login(token);
