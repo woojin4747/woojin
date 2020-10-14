@@ -639,11 +639,4 @@ client.on('message', (message) => {
   }
 });
 
-if(message.content.startsWith('!야')) {
-  let arr = [
-    '왜',
-    '뭐',
-    '뭠마',
-  ]
-}
 
