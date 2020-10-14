@@ -609,3 +609,37 @@ client.on('message', (message) => {
   }
 });
 
+client.on('message', (message) => {
+  if(message.content === '조랭아 둠칙둠칫') {
+    message.channel.send('둠칫둠칫둠칫');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 둠칫둠칫') {
+    message.channel.send('둠칫둠칫둠칫');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 둠칙 둠칫') {
+    message.channel.send('둠칫둠칫둠칫');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 둠칙 둠칫') {
+    message.channel.send('둠칫둠칫둠칫');
+  }
+});
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 둠칫 둠칫') {
+    message.channel.send('둠칫둠칫둠칫');
+  }
+});
+
+
+
+
+
