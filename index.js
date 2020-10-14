@@ -639,6 +639,34 @@ client.on('message', (message) => {
   }
 });
 
+if(message.content.startsWith('/청소')) {
+  if(checkPermission(message)) return
+
+  var clearLine = message.content.slice('/청소 '.length);
+  var isNum = !isNaN(clearLine)
+
+  if(isNum && (clearLine <= 0 || 100 < clearLine)) {
+    message.channel.send("1부터 100까지의 숫자만 입력해주세요.")
+    return;
+  } else if(!isNum) { // c @나긋해 3
+    if(message.content.split('<@').length == 2) {
+      if(isNaN(message.content.split(' ')[2])) return;
+
+      var user = message.content.split(' ')[1].split('<@!')[1].split('>')[0];
+      var count = parseInt(message.content.split(' ')[2])+1;
+      const _limit = 10;
+      let _cnt = 0;
+
+      message.channel.fetchMessages({limit: _limit}).then(collected => {
+        collected.every(msg => {
+          if(msg.author.id == user) {
+            msg.delete();
+            ++_cnt;
+          }
+          return !(_cnt == count);
+        });
+      });
+
 
 
 
