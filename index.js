@@ -650,3 +650,11 @@ client.on('message', (message) => {
     message.channel.send('이이잉~');
   }
 });
+
+client.on('message', (message) => {
+  if(message.content === '조랭아 얼간이 칭호 어때?') {
+    message.channel.send('오오 바로 추가하자~!');
+  }
+});
+
+
