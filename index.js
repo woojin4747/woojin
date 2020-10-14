@@ -1,34 +1,3 @@
-
-client.on('message', (message) => {
-if(message.content == 'ping') {
-    return message.reply('pong');
-  }
-
-  if(message.content.startsWith('/전체공지')) {
-    if(checkPermission(message)) return
-    if(message.member != null) {
-      let contents = message.content.slice('/전체공지'.length);
-      message.member.guild.members.array().forEach(x => {
-        if(x.user.bot) return;
-        x.user.send(`<@${message.author.id}> ${contents}`);
-      });
-  
-      return message.reply('공지를 전송했습니다.');
-    } else {
-      return message.reply('채널에서 실행해주세요.');
-    }
-  }
-});
-
-function checkPermission(message) {
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) {
-    message.channel.send(`<@${message.author.id}> ` + "명령어를 수행할 관리자 권한을 소지하고 있지않습니다.")
-    return true;
-  } else {
-    return false;
-  }
-}
-
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const token = process.env.token;
@@ -46,6 +15,11 @@ client.on('ready', () => {
   console.log('켰다.');
   client.user.setPresence({ game: { name: '!help를 쳐보세요.' }, status: 'online' })
 
+  let state_list = [
+    '!help를 쳐보세요.',
+    '메렁메렁',
+    '에베베베베',
+  ]
   let state_list_index = 1;
   let change_delay = 3000; // 이건 초입니당. 1000이 1초입니당.
 
@@ -110,7 +84,7 @@ client.on('message', (message) => {
     // client.users.find(x => x.id == adminUserId).send(embed);
   }
 
-  if(message.content.startsWith('!할추가')) {
+  if(message.content.startsWith('!역할추가')) {
     if(message.channel.type == 'dm') {
       return message.reply('dm에서 사용할 수 없는 명령어 입니다.');
     }
@@ -166,7 +140,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setTitle('타이틀')
       .setURL('http://www.naver.com')
-      .setAuthor('muno_woojin', img, 'http://www.naver.com')
+      .setAuthor('나긋해', img, 'http://www.naver.com')
       .setThumbnail(img)
       .addBlankField()
       .addField('Inline field title', 'Some value here')
@@ -176,13 +150,13 @@ client.on('message', (message) => {
       .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
       .addBlankField()
       .setTimestamp()
-      .setFooter('muno_woojin', img)
+      .setFooter('나긋해가 만듬', img)
 
     message.channel.send(embed)
   } else if(message.content == '!help') {
     let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
     let commandList = [
-      {name: '!help', desc: 'he'},
+      {name: '!help', desc: 'help'},
       {name: 'ping', desc: '현재 핑 상태'},
       {name: 'embed', desc: 'embed 예제1'},
       {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
@@ -230,10 +204,10 @@ client.on('message', (message) => {
           message.channel.send('**'+message.guild.channels.get(message.channel.id).guild.name+'** 채널 권한이 없어 초대코드 발행 실패')
         }
       })
-  } else if(message.content.startsWith('!전체지2')) {
+  } else if(message.content.startsWith('!전체공지2')) {
     if(checkPermission(message)) return
     if(message.member != null) { // 채널에서 공지 쓸 때
-      let contents = message.content.slice('!전체지2'.length);
+      let contents = message.content.slice('!전체공지2'.length);
       let embed = new Discord.RichEmbed()
         .setAuthor('공지 of 콜라곰 BOT')
         .setColor('#186de6')
@@ -251,10 +225,10 @@ client.on('message', (message) => {
     } else {
       return message.reply('채널에서 실행해주세요.');
     }
-  } else if(message.content.startsWith('!공지')) {
+  } else if(message.content.startsWith('!전체공지')) {
     if(checkPermission(message)) return
     if(message.member != null) { // 채널에서 공지 쓸 때
-      let contents = message.content.slice('!전지'.length);
+      let contents = message.content.slice('!전체공지'.length);
       message.member.guild.members.array().forEach(x => {
         if(x.user.bot) return;
         x.user.send(`<@${message.author.id}> ${contents}`);
@@ -264,14 +238,14 @@ client.on('message', (message) => {
     } else {
       return message.reply('채널에서 실행해주세요.');
     }
-  } else if(message.content.startsWith('/청소')) {
+  } else if(message.content.startsWith('!청소')) {
     if(message.channel.type == 'dm') {
       return message.reply('dm에서 사용할 수 없는 명령어 입니다.');
     }
     
     if(message.channel.type != 'dm' && checkPermission(message)) return
 
-    var clearLine = message.content.slice('/청소 '.length);
+    var clearLine = message.content.slice('!청소 '.length);
     var isNum = !isNaN(clearLine)
 
     if(isNum && (clearLine <= 0 || 100 < clearLine)) {
@@ -302,7 +276,7 @@ client.on('message', (message) => {
         })
         .catch(console.error)
     }
-  } else if(message.content.startsWith('/강퇴')) {
+  } else if(message.content.startsWith('!강퇴')) {
     if(message.channel.type == 'dm') {
       return message.reply('dm에서 사용할 수 없는 명령어 입니다.');
     }
@@ -315,7 +289,7 @@ client.on('message', (message) => {
     let kick_msg = message.author.username+'#'+message.author.discriminator+'이(가) 강퇴시켰습니다.';
     
     message.member.guild.members.find(x => x.id == userId).kick(kick_msg)
-  } else if(message.content.startsWith('/밴')) {
+  } else if(message.content.startsWith('!밴')) {
     if(message.channel.type == 'dm') {
       return message.reply('dm에서 사용할 수 없는 명령어 입니다.');
     }
@@ -328,7 +302,7 @@ client.on('message', (message) => {
     let kick_msg = message.author.username+'#'+message.author.discriminator+'이(가) 강퇴시켰습니다.';
 
     message.member.guild.members.find(x => x.id == userId).ban(kick_msg)
-  } else if(message.content.startsWith('/주사위')) {
+  } else if(message.content.startsWith('!주사위')) {
     let min = 1;
     let max = 6;
     let dice_num = parseInt(Math.random() * (max - min) + min);
@@ -446,15 +420,3 @@ function MessageSave(message, modify=false) {
 
 
 client.login(token);
-
-client.on('message', (message) => {
-  if(message.content === '/help') {
-    message.channel.send('``/help: 도움말을 엽니다, /전체공지 내용: 유저 갠디에 메세지를 보냅니다``');
-  }
-});
-
-client.on('message', (message) => {
-  if(message.content === '조랭아') {
-    message.channel.send('네넵!');
-  }
-});
