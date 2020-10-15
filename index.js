@@ -4,6 +4,7 @@ const token = process.env.token;
 
 client.on('ready', () => {
   console.log('켰다.');
+  client.user.setPresence({ game: { name: '!help를 쳐보세요.' }, status: 'online' })
 });
 
 client.on('message', (message) => {
@@ -20,18 +21,6 @@ client.on('message', (message) => {
 
 client.on('message', (message) => {
   if(message.content === '조랭아 카파바보') {
-    message.channel.send('ㅇㅈ');
-  }
-});
-
-client.on('message', (message) => {
-  if(message.content === '조랭아 우진 바보') {
-    message.channel.send('지-건');
-  }
-});
-
-client.on('message', (message) => {
-  if(message.content === '조랭아 카파 바보') {
     message.channel.send('ㅇㅈ');
   }
 });
@@ -424,7 +413,7 @@ client.on('message', (message) => {
 
 client.on('message', (message) => {
   if(message.content === '조랭아 무노') {
-    message.channel.send('무노 무노~!');
+    message.channel.send('...');
   }
 });
 
@@ -460,7 +449,7 @@ client.on('message', (message) => {
 
 client.on('message', (message) => {
   if(message.content === '조랭아 ?') {
-    message.channel.send('무노?');
+    message.channel.send('왱?');
   }
 });
 
@@ -538,7 +527,7 @@ client.on('message', (message) => {
 
 client.on('message', (message) => {
   if(message.content === '조랭아 카파') {
-    message.channel.send('바보');
+    message.channel.send('...');
   }
 });
 
@@ -552,13 +541,13 @@ client.on('message', (message) => {
 
 client.on('message', (message) => {
   if(message.content === '조랭아 푸슉') {
-    message.channel.send('무노마을에서 가장 착하고 멋지고 키크고 인성 좋고 목소리 좋고 게임도 잘하고 머리도 좋은 무노마을 촌장님 :)');
+    message.channel.send('...');
   }
 });
 
 client.on('message', (message) => {
   if(message.content === '조랭아 파이어') {
-    message.channel.send('포켔몬?');
+    message.channel.send('...');
   }
 });
 
@@ -653,3 +642,4 @@ client.on('message', (message) => {
 });
 
 client.login(token);
+
