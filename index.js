@@ -322,7 +322,7 @@ client.on('message', (message) => {
 });
 
 client.on('message', (message) => {
-  if(message.content === '!놀아줘') {
+  if(message.content === '조랭아 놀아줘') {
     message.channel.send('아싸도 아니고 혼자 놀아(퍽)');
   }
 });
