@@ -694,46 +694,5 @@ client.on('message', (message) => {
   }
 });
 
-if(message.content == 'dmdmdlslall') {
-  let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
-  let embed = new Discord.RichEmbed()
-    .setTitle('타이틀')
-    .setURL('http://www.naver.com')
-    .setAuthor('woojin', img, 'http://www.naver.com')
-    .setThumbnail(img)
-    .addBlankField()
-    .addField('Inline field title', 'Some value here')
-    .addField('Inline field title', 'Some value here', true)
-    .addField('Inline field title', 'Some value here', true)
-    .addField('Inline field title', 'Some value here', true)
-    .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
-    .addBlankField()
-    .setTimestamp()
-    .setFooter('made by Woojin', img)
-
-  message.channel.send(embed)
-} else if(message.content == '/help') {
-  let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
-  let commandList = [
-    {name: '/help', desc: '도움말을 엽니다'},
-    {name: '/전체공지', desc: 'DM으로 전체공지가 갑니다'},
-    {name: '/청소', desc: '메세지를 삭제합니다'},
-  ];
-  let commandStr = '';
-  let embed = new Discord.RichEmbed()
-    .setAuthor('help of 조랭이 봇', helpImg)
-    .setColor('#186de6')
-    .setFooter(`조랭이 봇`)
-    .setTimestamp()
-  
-  commandList.forEach(x => {
-    commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
-  });
-
-  embed.addField('Commands: ', commandStr);
-
-  message.channel.send(embed)
-}
-
 client.login(token);
 
