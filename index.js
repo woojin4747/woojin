@@ -689,42 +689,52 @@ client.on('message', (message) => {
 });
 
 client.on('message', (message) => {
-  if(message.content === '/help') {
+  if(message.content === '/hlp') {
     message.channel.send('```/help: 도움말을 엽니다\n/전체공지: 갠디로 공지가 갑니다\n/청소: 메세지를 삭제합니다```');
   }
 });
 
-if(message.content == '/서버 상태') {
-  let embed = new Discord.RichEmbed()
+
+if(message.content == 'dmdmdlslall') {
   let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
-  var duration = moment.duration(client.uptime).format(" D [일], H [시간], m [분], s [초]");
-  embed.setColor('#186de6')
-  embed.setAuthor('server info of woojin4747', img)
-  embed.setFooter(`made by Woojin`)
-  embed.addBlankField()
-  embed.addField('RAM usage',    `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`, true);
-  embed.addField('running time', `${duration}`, true);
-  embed.addField('user',         `${client.users.size.toLocaleString()}`, true);
-  embed.addField('server',       `${client.guilds.size.toLocaleString()}`, true);
-  // embed.addField('channel',      `${client.channels.size.toLocaleString()}`, true);
-  embed.addField('Discord.js',   `v${Discord.version}`, true);
-  embed.addField('Node',         `${process.version}`, true);
-  
-  let arr = client.guilds.array();
-  let list = '';
-  list = `\`\`\`css\n`;
-  
-  for(let i=0;i<arr.length;i++) {
-    // list += `${arr[i].name} - ${arr[i].id}\n`
-    list += `${arr[i].name}\n`
-  }
-  list += `\`\`\`\n`
-  embed.addField('list:',        `${list}`);
+  let embed = new Discord.RichEmbed()
+    .setTitle('타이틀')
+    .setURL('http://www.naver.com')
+    .setAuthor('woojin', img, 'http://www.naver.com')
+    .setThumbnail(img)
+    .addBlankField()
+    .addField('Inline field title', 'Some value here')
+    .addField('Inline field title', 'Some value here', true)
+    .addField('Inline field title', 'Some value here', true)
+    .addField('Inline field title', 'Some value here', true)
+    .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
+    .addBlankField()
+    .setTimestamp()
+    .setFooter('made by Woojin', img)
 
-  embed.setTimestamp()
-  message.channel.send(embed);
+  message.channel.send(embed)
+} else if(message.content == '/help') {
+  let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
+  let commandList = [
+    {name: '/help', desc: '도움말을 엽니다'},
+    {name: '/전체공지', desc: 'DM으로 전체공지가 갑니다'},
+    {name: '/청소', desc: '메세지를 삭제합니다'},
+  ];
+  let commandStr = '';
+  let embed = new Discord.RichEmbed()
+    .setAuthor('help of 조랭이 봇', helpImg)
+    .setColor('#186de6')
+    .setFooter(`조랭이 봇`)
+    .setTimestamp()
+  
+  commandList.forEach(x => {
+    commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+  });
+
+  embed.addField('Commands: ', commandStr);
+
+  message.channel.send(embed)
 }
-
 
 client.login(token);
 
