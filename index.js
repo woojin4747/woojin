@@ -689,33 +689,10 @@ client.on('message', (message) => {
 });
 
 client.on('message', (message) => {
-  if(message.content === '/hlp') {
+  if(message.content === '/help') {
     message.channel.send('```/help: 도움말을 엽니다\n/전체공지: 갠디로 공지가 갑니다\n/청소: 메세지를 삭제합니다```');
   }
 });
-
-if(message.content == '/help') {
-  let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
-  let commandList = [
-    {name: '/help', desc: '도움말을 엽니다'},
-    {name: '/전체공지', desc: 'DM으로 전체공지가 갑니다'},
-    {name: '/청소', desc: '메세지를 삭제합니다'},
-  ];
-  let commandStr = '';
-  let embed = new Discord.RichEmbed()
-    .setAuthor('help of 조랭이 봇', helpImg)
-    .setColor('#186de6')
-    .setFooter(`조랭이 봇`)
-    .setTimestamp()
-  
-  commandList.forEach(x => {
-    commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
-  });
-
-  embed.addField('Commands: ', commandStr);
-
-  message.channel.send(embed)
-}
 
 client.login(token);
 
