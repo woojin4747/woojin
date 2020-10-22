@@ -694,7 +694,7 @@ client.on('message', (message) => {
   }
 });
 
-if(message.content == 'embed') {
+if(message.content == 'emd') {
   let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
   let embed = new Discord.RichEmbed()
     .setTitle('타이틀')
@@ -712,23 +712,18 @@ if(message.content == 'embed') {
     .setFooter('나긋해가 만듬', img)
 
   message.channel.send(embed)
-} else if(message.content == '!help') {
+} else if(message.content == '/help') {
   let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
   let commandList = [
-    {name: '!help', desc: 'help'},
-    {name: 'ping', desc: '현재 핑 상태'},
-    {name: 'embed', desc: 'embed 예제1'},
-    {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
-    {name: '!전체공지2', desc: 'dm으로 전체 embed 형식으로 공지 보내기'},
-    {name: '!청소', desc: '텍스트 지움'},
-    {name: '!초대코드', desc: '해당 채널의 초대 코드 표기'},
-    {name: '!초대코드2', desc: '봇이 들어가있는 모든 채널의 초대 코드 표기'},
+    {name: '/help', desc: '도움말을 엽니다'},
+    {name: '/전체공지', desc: '갠디로 공지가 갑니다'},
+    {name: '/청소', desc: '메세지를 삭제합니다'},
   ];
   let commandStr = '';
   let embed = new Discord.RichEmbed()
-    .setAuthor('Help of 콜라곰 BOT', helpImg)
+    .setAuthor('help of 조랭이 봇', helpImg)
     .setColor('#186de6')
-    .setFooter(`콜라곰 BOT ❤️`)
+    .setFooter(`조랭이 봇`)
     .setTimestamp()
   
   commandList.forEach(x => {
