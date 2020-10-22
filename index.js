@@ -690,7 +690,7 @@ client.on('message', (message) => {
 
 client.on('message', (message) => {
   if(message.content === '/help') {
-    message.channel.send('```/help: 도움말을 엽니다\n/전체공지 내용: 갠디로 공지가 갑니다```');
+    message.channel.send('```/help: 도움말을 엽니다\n/전체공지: 갠디로 공지가 갑니다\n/청소: 메세지를 삭제합니다```');
   }
 });
 
