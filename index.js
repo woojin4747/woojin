@@ -264,7 +264,7 @@ client.on('message', (message) => {
     let kick_msg = message.author.username+'#'+message.author.discriminator+'이(가) 강퇴시켰습니다.';
     
     message.member.guild.members.find(x => x.id == userId).kick(kick_msg)
-  } else if(message.content.startsWith('/밴')) {
+  } else if(message.content.startsWith('/벤')) {
     if(message.channel.type == 'dm') {
       return message.reply('dm에서 사용할 수 없는 명령어 입니다.');
     }
@@ -277,7 +277,7 @@ client.on('message', (message) => {
     let kick_msg = message.author.username+'#'+message.author.discriminator+'이(가) 강퇴시켰습니다.';
 
     message.member.guild.members.find(x => x.id == userId).ban(kick_msg)
-  } else if(message.content.startsWith('!주사위')) {
+  } else if(message.content.startsWith('/주사위')) {
     let min = 1;
     let max = 6;
     let dice_num = parseInt(Math.random() * (max - min) + min);
@@ -738,7 +738,7 @@ client.on('message', (message) => {
 
 client.on('message', (message) => {
   if(message.content === '/help') {
-    message.channel.send('```/help: 도움말을 엽니다\n/전체공지: 갠디로 공지가 갑니다\n/청소: 메세지를 삭제합니다\n/밴: 서버에서 밴 합니다\n/강퇴: 서버에서 강퇴 합니다```');
+    message.channel.send('```/help: 도움말을 엽니다\n/전체공지: 갠디로 공지가 갑니다\n/청소: 메세지를 삭제합니다\n/벤: 서버에서 밴 합니다\n/강퇴: 서버에서 강퇴 합니다```');
   }
 });
 
