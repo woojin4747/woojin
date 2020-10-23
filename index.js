@@ -441,6 +441,12 @@ client.on('message', (message) => {
 });
 
 client.on('message', (message) => {
+  if(message.content === '조랭아 붸') {
+    message.channel.send('뷁');
+  }
+});
+
+client.on('message', (message) => {
   if(message.content === '조랭아 강아지') {
     message.channel.send('그런 하등한 생물의 이름을 꺼내지 마세요 흥!');
   }
