@@ -224,7 +224,7 @@ client.on('message', (message) => {
     var isNum = !isNaN(clearLine)
 
     if(isNum && (clearLine <= 0 || 100 < clearLine)) {
-      message.channel.send("1부터 99까지의 숫자만 입력해주세요.")
+      message.channel.send("1부터 100까지의 숫자만 입력해주세요.")
       return;
     } else if(!isNum) { // c @나긋해 3
       if(message.content.split('<@').length == 2) {
@@ -251,17 +251,34 @@ client.on('message', (message) => {
         })
         .catch(console.error)
     }
+  } else if(message.content.startsWith('/강퇴')) {
+    if(message.channel.type == 'dm') {
+      return message.reply('dm에서 사용할 수 없는 명령어 입니다.');
+    }
+    
+    if(message.channel.type != 'dm' && checkPermission(message)) return
+
+    console.log(message.mentions);
+
+    let userId = message.mentions.users.first().id;
+    let kick_msg = message.author.username+'#'+message.author.discriminator+'이(가) 강퇴시켰습니다.';
+    
+    message.member.guild.members.find(x => x.id == userId).kick(kick_msg)
+  } else if(message.content.startsWith('/밴')) {
+    if(message.channel.type == 'dm') {
+      return message.reply('dm에서 사용할 수 없는 명령어 입니다.');
+    }
+    
+    if(message.channel.type != 'dm' && checkPermission(message)) return
+
+    console.log(message.mentions);
+
+    let userId = message.mentions.users.first().id;
+    let kick_msg = message.author.username+'#'+message.author.discriminator+'이(가) 강퇴시켰습니다.';
+
+    message.member.guild.members.find(x => x.id == userId).ban(kick_msg)
   }
 });
-
-function checkPermission(message) {
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) {
-    message.channel.send(`<@${message.author.id}> ` + "명령어를 수행할 관리자 권한을 소지하고 있지않습니다.")
-    return true;
-  } else {
-    return false;
-  }
-}
 
 function checkPermission(message) {
   if(!message.member.hasPermission("MANAGE_MESSAGES")) {
