@@ -726,17 +726,5 @@ client.on('message', (message) => {
   }
 });
 
-if(message.content.startsWith('조랭아 ㅎ')) {
-  let arr = [
-    '왜',
-    '뭐',
-    '뭠마',
-  ]
-  let min = 0;
-  let max = arr.length;
-  let index = parseInt(Math.random() * (max - min) + min);
-  message.channel.send(`${arr[index]}`);
-}
-
 client.login(token);
 
