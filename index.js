@@ -292,6 +292,16 @@ client.on('message', (message) => {
     let max = arr.length;
     let index = parseInt(Math.random() * (max - min) + min);
     message.channel.send(`${arr[index]}`);
+  } else if(message.content.startsWith('조랭아 안녕')) {
+    let arr = [
+      '안녕',
+      '뭐',
+      '이이익',
+    ]
+    let min = 0;
+    let max = arr.length;
+    let index = parseInt(Math.random() * (max - min) + min);
+    message.channel.send(`${arr[index]}`);
   }
 });
 
@@ -725,18 +735,6 @@ client.on('message', (message) => {
     message.channel.send('```/help: 도움말을 엽니다\n/전체공지: 갠디로 공지가 갑니다\n/청소: 메세지를 삭제합니다\n/밴: 서버에서 밴 합니다\n/강퇴: 서버에서 강퇴 합니다```');
   }
 });
-
-if(message.content.startsWith('조랭아 ㅎ')) {
-  let arr = [
-    '왜',
-    '뭐',
-    '뭠마',
-  ]
-  let min = 0;
-  let max = arr.length;
-  let index = parseInt(Math.random() * (max - min) + min);
-  message.channel.send(`${arr[index]}`);
-}
 
 client.login(token);
 
