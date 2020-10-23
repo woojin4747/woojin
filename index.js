@@ -292,6 +292,16 @@ client.on('message', (message) => {
     let max = arr.length;
     let index = parseInt(Math.random() * (max - min) + min);
     message.channel.send(`${arr[index]}`);
+  } else if(message.content.startsWith('조랭아 테스트')) {
+    let arr = [
+      '왜',
+      '뭐',
+      '이익',
+    ]
+    let min = 0;
+    let max = arr.length;
+    let index = parseInt(Math.random() * (max - min) + min);
+    message.channel.send(`${arr[index]}`);
   }
 });
 
