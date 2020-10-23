@@ -291,7 +291,7 @@ client.on('message', (message) => {
     let min = 0;
     let max = arr.length;
     let index = parseInt(Math.random() * (max - min) + min);
-    return message.reply(`${arr[index]}가 나왔습니다.`);
+    message.channel.send(`${arr[index]}`);
   }
 });
 
