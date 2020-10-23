@@ -513,13 +513,6 @@ client.on('message', (message) => {
 });
 
 client.on('message', (message) => {
-  if(message.content === '조랭아 안녕') {
-    message.channel.send('아..안녕하세요!');
-  }
-});
-
-
-client.on('message', (message) => {
   if(message.content === '조랭아 니가 뭘알아') {
     message.channel.send('조랭이떡 같이 생긴게!!!');
   }
